@@ -16,7 +16,7 @@ v.AddColumn("status", "状态").Required("状态是必须的").Bool("状态是�
 v.AddColumn("other", "其他")
 
 if !v.Validate(data) {
-    fmt.Println(v.Error().field, v.Error().fieldAlias, v.Error().fieldData, v.Error().rule, v.Error().ruleArgs, v.Error().errorMessage)
+    fmt.Println(v.Error().GetField(), v.Error().GetFieldAlias(), v.Error().GetFieldData(), v.Error().GetRule(), v.Error().GetRuleArg(), v.Error().GetErrorMessage())
     return
 }
 

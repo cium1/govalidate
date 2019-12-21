@@ -25,7 +25,7 @@ func TestValidate(t *testing.T) {
 	v.AddColumn("other", "")
 
 	if v.Validate(data) != true {
-		t.Error(v.Error().field, v.Error().fieldAlias, v.Error().fieldData, v.Error().rule, v.Error().ruleArgs, v.Error().errorMessage)
+		t.Error(v.Error().GetField(), v.Error().GetFieldAlias(), v.Error().GetFieldData(), v.Error().GetRule(), v.Error().GetRuleArg(), v.Error().GetErrorMessage())
 	}
 
 }
