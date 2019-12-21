@@ -20,5 +20,6 @@ golang 数据验证包
 	    return
 	}
 
-    fmt.Println(v.GetData())
+	fmt.Println(v.GetData())
+
 ```
